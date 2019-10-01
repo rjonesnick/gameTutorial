@@ -14,7 +14,7 @@ namespace Engine.Models
 
         public GameItem(int itemTypeID, string name, int price)
         {
-            ItemTypeID = ItemTypeID;
+            ItemTypeID = itemTypeID;
             Name = name;
             Price = price;
         }
