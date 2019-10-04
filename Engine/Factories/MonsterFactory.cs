@@ -17,11 +17,35 @@ namespace Engine.Factories
                     AddLootItem(snake, 9002, 75);
 
                     return snake;
+
                 case 2:
                     Monster rat =
                         new Monster("Rat", "Rat.png", 5, 5, 5, 1);
 
                     AddLootItem(rat, 9003, 25);
+                    AddLootItem(rat, 9004, 75);
+
+                    return rat;
+
+                case 3:
+                    Monster giantSpider =
+                        new Monster("Giant Spider", "GiantSpider.png", 10, 10, 10, 3);
+
+                    AddLootItem(giantSpider, 9005, 25);
+                    AddLootItem(giantSpider, 9006, 75);
+
+                    return giantSpider;
+
+                default:
+                    throw new ArgumentException(string.Format("MonsterType '{0}' does not exist", monsterID));
+            }
+        }
+        
+        private static void AddLootItem(MonsterFactory monster, int itemID, int percentage)
+        {
+            if (RandomNumberGenerator.NumberBetween(1, 100) <= percentage)
+            {
+                monster.Inventory.Add(new ItemQuantity(itemID, 1));
             }
         }
     }
