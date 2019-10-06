@@ -41,7 +41,7 @@ namespace Engine.Factories
             }
         }
         
-        private static void AddLootItem(MonsterFactory monster, int itemID, int percentage)
+        private static void AddLootItem(Monster monster, int itemID, int percentage)
         {
             if (RandomNumberGenerator.NumberBetween(1, 100) <= percentage)
             {
