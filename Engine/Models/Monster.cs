@@ -12,9 +12,9 @@ namespace Engine.Models
         private int _hitPoints;
 
         public string Name { get; private set; }
-        private string ImageName { get; set; }
-        private int MaximumHitPoints { get; private set; }
-        private int HitPoints
+        public string ImageName { get; set; }
+        public int MaximumHitPoints { get; private set; }
+        public int HitPoints
         {
             get { return _hitPoints; }
             private set
