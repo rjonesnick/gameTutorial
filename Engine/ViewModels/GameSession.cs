@@ -129,6 +129,7 @@ namespace Engine.ViewModels
         {
             foreach(Quest quest in CurrentLocation.QuestsAvailableHere)
             {
+                // Error appearing in line below
                 if(!CurrentPlayer.Quests.Any(q => q.PlayerQuest.ID == quest.ID))
                 {
                     CurrentPlayer.Quests.Add(new QuestStatus(quest));
